@@ -1,5 +1,3 @@
-// src/models/User.ts
-
 import mongoose, { Schema, Document, Model } from 'mongoose';
 import bcrypt from 'bcrypt';
 
@@ -65,6 +63,5 @@ UserSchema.methods.comparePassword = async function (
 };
 
 // 5) Create the model from schema
-// mongoose.models.User check avoids model overwrite in dev/watch mode
 export const User: Model<IUser> =
   mongoose.models.User || mongoose.model<IUser>('User', UserSchema);

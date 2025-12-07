@@ -1,5 +1,3 @@
-// src/routes/authRoutes.ts
-
 import { Router, Request, Response, NextFunction } from 'express';
 import { User } from '../models/User';
 import jwt from 'jsonwebtoken';
@@ -65,8 +63,6 @@ const authMiddleware = (
   }
 };
 
-
-
 /**
  * -------------------------------------------------------
  * 🟢 SIGNUP ROUTE (with strong password validation)
@@ -126,9 +122,6 @@ router.post('/signup', async (req: Request, res: Response) => {
     return res.status(500).json({ message: 'Signup error.' });
   }
 });
-
-
-
 
 /**
  * -------------------------------------------------------

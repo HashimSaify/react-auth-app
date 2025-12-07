@@ -1,5 +1,3 @@
-// src/server.ts
-
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -16,7 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // ---------- GLOBAL MIDDLEWARES ---------- //
 
-// Allow requests from our React frontend (http://localhost:3000)
+// Allow requests from React frontend (http://localhost:3000)
 app.use(
   cors({
     origin: 'http://localhost:3000',
