@@ -15,9 +15,14 @@ const PORT = process.env.PORT || 5000;
 // ---------- GLOBAL MIDDLEWARES ---------- //
 
 // Allow requests from React frontend (http://localhost:3000)
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://reactauthapp-six.vercel.app', // ⬅️ replace with your actual Vercel URL
+];
+
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: allowedOrigins,
     credentials: true,
   })
 );
